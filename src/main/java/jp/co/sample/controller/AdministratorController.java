@@ -30,7 +30,7 @@ public class AdministratorController {
 	@RequestMapping("/toInsert")
 	public String toInsert() {
 		
-		return "administrator/indert.html";
+		return "administrator/insert.html";
 	}
 	
 }

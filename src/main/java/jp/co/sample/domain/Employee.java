@@ -10,6 +10,7 @@ import java.util.Date;
 
 public class Employee {
 
+
 	private Integer id;
 	private String name;
 	private String image;
@@ -23,7 +24,10 @@ public class Employee {
 	private String characteristics;
 	private Integer dependentsCount;
 	
-	
+
+	public Employee() {
+		super();
+	}
 	
 	public Employee(Integer id, String name, String image, String gender, Date hireDate, String mailAddress,
 			String zipCode, String address, String telephone, Integer salary, String characteristics,

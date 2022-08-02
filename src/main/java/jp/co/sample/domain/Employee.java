@@ -9,6 +9,21 @@ import java.util.Date;
 
 
 public class Employee {
+
+	private Integer id;
+	private String name;
+	private String image;
+	private String gender;
+	private java.util.Date hireDate;
+	private String mailAddress;
+	private String zipCode;
+	private String address;
+	private String telephone;
+	private Integer salary;
+	private String characteristics;
+	private Integer dependentsCount;
+	
+	
 	
 	public Employee(Integer id, String name, String image, String gender, Date hireDate, String mailAddress,
 			String zipCode, String address, String telephone, Integer salary, String characteristics,
@@ -28,18 +43,6 @@ public class Employee {
 		this.dependentsCount = dependentsCount;
 	}
 	
-	private Integer id;
-	private String name;
-	private String image;
-	private String gender;
-	private java.util.Date hireDate;
-	private String mailAddress;
-	private String zipCode;
-	private String address;
-	private String telephone;
-	private Integer salary;
-	private String characteristics;
-	private Integer dependentsCount;
 	public Integer getId() {
 		return id;
 	}

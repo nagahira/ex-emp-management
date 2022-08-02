@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
 import jp.co.sample.domain.Employee;
 /**
  * EmployeeRepository 
- * employeesからのfindAll(),load(),update()
+ * employeesテーブルへのfindAll(),load(),update()
  * 
  * @author hiratanagahiro
  *

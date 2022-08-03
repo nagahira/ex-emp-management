@@ -74,7 +74,7 @@ public class AdministratorController {
 		Administrator administrator = administratorService.login(form.getMailAddress(), form.getPassword());
 		
 		if(administrator == null) {
-			model.addAttribute("message","メールアドレスまたはパスワードが不正です。");
+			model.addAttribute("message","aaaaaa");
 			return "administrator/login";
 		}else {
 			session.setAttribute("administrayorName", administrator);

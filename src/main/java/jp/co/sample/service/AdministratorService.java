@@ -22,4 +22,16 @@ public class AdministratorService {
 		
 	}
 	
+	/**
+	 * @author hiratanagahiro
+	 * @param mailAddress
+	 * @param password
+	 * @return
+	 * ログイン処理。mailaddress,passwordをreturn
+	 */
+	public Administrator login(String mailAddress,String password) {
+		Administrator administrator = administratorRepository.findByMailAddressAndPassword(mailAddress, password);
+		return administrator;
+	}
+	
 }

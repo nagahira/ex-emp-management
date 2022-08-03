@@ -7,34 +7,35 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import jp.co.sample.domain.Administrator;
 import jp.co.sample.form.InsertAdministratorForm;
+import jp.co.sample.form.LoginForm;
 import jp.co.sample.service.AdministratorService;
+
 /**
- * コントローラー
- * インサート作成
+ * コントローラー インサート作成
+ * 
  * @author hiratanagahiro
  *
  *
  */
-
 
 @Controller
 @RequestMapping("/")
 public class AdministratorController {
 	@Autowired
 	private AdministratorService administratorService;
-	
+
 	@ModelAttribute
 	public InsertAdministratorForm setUpInsertAdministratorForm() {
 		InsertAdministratorForm insertAdministratorForm = new InsertAdministratorForm();
 		return insertAdministratorForm;
 	}
-	
+
 	@RequestMapping("/toInsert")
 	public String toInsert() {
-		
+
 		return "administrator/insert.html";
 	}
-	
+
 	@RequestMapping("/insert")
 	public String insert(InsertAdministratorForm form) {
 		Administrator administrator = new Administrator();
@@ -47,9 +48,18 @@ public class AdministratorController {
 //		administrator.setMailAddress("aaaaaa");
 //		administrator.setPassword("aaaaaa");
 //		administratorService.insert(administrator);
-		
 		return "redirect:/";
 	}
 
+	@ModelAttribute
+	public LoginForm setUpLoginForm() {
+		LoginForm loginForm = new LoginForm();
+		return loginForm;
+	}
 	
+	@RequestMapping("/")
+	public String toLogin() {
+		return "administrator/login.html";
+	}
+
 }

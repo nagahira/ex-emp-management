@@ -25,7 +25,7 @@ public class EmployeeController {
 	@RequestMapping("/showList")
 	public String showList(Model model) {
 		List<Employee> employeeList = employeeService.showList();
-		model.addAttribute(employeeList);
+		model.addAttribute("employeeList",employeeList);
 		return "employee/list.html";
 	}
 }

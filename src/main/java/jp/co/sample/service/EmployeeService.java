@@ -26,5 +26,15 @@ public class EmployeeService {
 	return employeeList;
 	}
 	
+	/**
+	 * 従業員情報の取得
+	 * @param id
+	 * @return
+	 */
+	public Employee showDetail(Integer id) {
+		Employee employee = employeeRepository.load(id);
+		return employee;
+	}
+	
 	
 }

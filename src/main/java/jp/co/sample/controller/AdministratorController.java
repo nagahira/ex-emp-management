@@ -9,9 +9,10 @@ import jp.co.sample.domain.Administrator;
 import jp.co.sample.form.InsertAdministratorForm;
 import jp.co.sample.service.AdministratorService;
 /**
- * controller 作成。
- * setUp,insertのみ作成済み。
+ * コントローラー
+ * インサート作成
  * @author hiratanagahiro
+ *
  *
  */
 
@@ -36,9 +37,19 @@ public class AdministratorController {
 	
 	@RequestMapping("/insert")
 	public String insert(InsertAdministratorForm form) {
-//		Administrator administrator = new Administrator();
-//		administrator.setId(form.ge);
+		Administrator administrator = new Administrator();
+		administrator.setName(form.getName());
+		administrator.setMailAddress(form.getMailAddress());
+		administrator.setPassword(form.getPassword());
+		administratorService.insert(administrator);
+//
+//		administrator.setName("ああああ");
+//		administrator.setMailAddress("aaaaaa");
+//		administrator.setPassword("aaaaaa");
+//		administratorService.insert(administrator);
+		
+		return "redirect:/";
 	}
-	
+
 	
 }
